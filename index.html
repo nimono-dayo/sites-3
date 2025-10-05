@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>コメント荒らし素材作成サイト</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>コメ荒らし素材作成サイト</h1>
+    
+    <div class="controls">
+      <div class="control-group">
+        <label for="baseText">ベース文字（最大100文字）:</label>
+        <input type="text" id="baseText" maxlength="100" value="a" placeholder="ベース文字を入力">
+      </div>
+
+      <div class="control-group">
+        <label for="length">長さ: <span id="lengthValue">100</span></label>
+        <input type="range" id="length" min="1" max="100000" value="100">
+        <input type="number" id="lengthNumber" min="1" max="100000" value="100">
+      </div>
+
+      <div class="control-group">
+        <label for="density">密度: <span id="densityValue">10</span></label>
+        <input type="range" id="density" min="1" max="1000" value="10">
+        <input type="number" id="densityNumber" min="1" max="1000" value="10">
+      </div>
+
+      <button id="generateBtn">生成</button>
+    </div>
+
+    <div class="output-section">
+      <h2>生成された文字:</h2>
+      <div id="output" class="output-box"></div>
+      <button id="copyBtn">コピー</button>
+      <div id="copyMessage" class="copy-message"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
